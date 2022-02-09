@@ -12,7 +12,7 @@ const GameTable = () => {
 
     useEffect(() => {
         const dataAxios = async () => {
-            const res = await axios('http://127.0.0.1:5000/games');
+            const res = await axios('https://flask.9h8feme1mh5au.ca-central-1.cs.amazonlightsail.com/games');
             setData(res.data.games);
             console.log('useEffect')
         };
@@ -21,7 +21,7 @@ const GameTable = () => {
 
     const handleDelete = (e,id) => {
         console.log(id);
-        axios.delete(`http://localhost:5000/games/${id}`)
+        axios.delete(`https://flask.9h8feme1mh5au.ca-central-1.cs.amazonlightsail.com/games/${id}`)
             .then(function (response) {
                 console.log(response.response.data);
             })

@@ -15,7 +15,7 @@ const AddGame = () => {
     }
 
     const postGames = () => {
-        axios.post('http://127.0.0.1:5000/games',{ title:title, genre:genre, played:played })
+        axios.post('https://flask.9h8feme1mh5au.ca-central-1.cs.amazonlightsail.com/games',{ title:title, genre:genre, played:played })
             .then(function (response) {
                 console.log(response.response.data);
             })
